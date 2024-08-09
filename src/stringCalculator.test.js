@@ -41,3 +41,10 @@ test("should throw an error listing all negative numbers", () => {
   );
 });
 
+test("should return the number itself if one number is provided, even with a trailing comma", () => {
+  expect(add("2,")).toBe(2);
+});
+
+test("should return the number itself if number is provided, even with multiple comma", () => {
+  expect(add("2,2,,,,,,")).toBe(4);
+});
